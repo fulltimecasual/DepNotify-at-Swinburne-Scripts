@@ -133,9 +133,9 @@ echo "dep-adobeCC2018Full policy completed"
 # Application Installation Completed
 ##################################################################################
 
-echo "**************************************************"
+
 echo "Installation of Base SOE Applications Complete"
-echo "**************************************************"
+
 
 
 exit 0
