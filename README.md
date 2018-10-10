@@ -11,13 +11,13 @@ This script is set to enrolment. It installs DepNotify, a depnotify local accoun
 
 https://github.com/gregneagle/pycreateuserpkg
 
-And then reboots, and logs in, to kick off DepNotify. (Will repalce this as soon as Nolotify works over login)
+And then reboots, and logs in, to kick off __DepNotify__. (Will repalce this as soon as Nolotify works over login)
 
-Because the first script sets a Computer Role (either Staff, Labs, Shared or Loaner) it moves into a smartgroup, and then runs either the Staff Script:
+Because the first script sets a __Computer Role__ (either Staff, Labs, Shared or Loaner) it moves into a smartgroup, and then runs either the __Staff Script:
 
 https://github.com/fulltimecasual/DepNotify-at-Swinburne-Scripts/blob/master/2.%20DEP%20-%20Complete%20Staff%20Enrolment%202019.sh
 
-Or the Labs Script: 
+Or the __Labs Script: 
 
 https://github.com/fulltimecasual/DepNotify-at-Swinburne-Scripts/blob/master/3.%20DEP%20-%20Install%20SOE%20Software%20Student%20Labs%202019.sh
 
