@@ -2,9 +2,9 @@
 
 ##########################################################################################
 #
-# Created by: Peter Wells
-#Ext: 8148
-#13-08-2018
+# Created by: Steve Valle
+#
+# Updated by: Peter Wells
 # All computers enrolled into Casper using Apple DEP will be required to run this script.
 # This script triggers policies which will configure the OS with SOE related settings.
 ##########################################################################################
@@ -55,7 +55,7 @@ echo "dep-staffPackages policy completed"
 
 ##########################################################################################
 # Run policy to install Printers & Printer Drivers
-#	• Staff Printer (lpd://HAP-PS07.ds.swin.edu.au/Staff%20Printer)
+#	• Staff Printer 
 ##########################################################################################
 
 jamf policy -trigger dep-staffPrinter
