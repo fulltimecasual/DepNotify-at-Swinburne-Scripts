@@ -4,11 +4,11 @@
 #
 # Created by: Steve Valle
 # Date Created: 10/11/16
-# Ext. No.: 8834
+# 
 #
 # Updated by: Peter Wells
-#Ext: 8148
-#10-10-2018
+#
+#
 #
 # All Student Labs will use Apple DEP to enroll into Jamf and install settings and
 # applications.
