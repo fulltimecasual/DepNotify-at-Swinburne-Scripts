@@ -133,10 +133,13 @@ kill "$caffeinatepid"
 # Remove DEPNotify and the logs
 rm -Rf /Applications/Utilities/DEPNotify.app
 
-# Wait a few seconds
-sleep 5
-
 # Remove the autologin user password file so it doesn't login again
 rm -Rf /etc/kcpassword
-    
+
+#Drop an Enrolment Complete Receipt into Shared User Folder
+/Users/Shared/.EnrolmentComplete
+
+# Wait a few seconds
+sleep 5
+ 
 exit 0
