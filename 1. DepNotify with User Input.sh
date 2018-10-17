@@ -126,10 +126,6 @@ echo "Command: MainTitle: All done!"  >> /var/tmp/depnotify.log
 echo "Command: MainText: This Mac will restart shortly and you'll be able to log in. \n \n If you need any assistance, please contact the Swinburne Service Desk. \n \n Telephone: 9214 5000 \n Email: servicedesk@swin.edu.au"  >> /var/tmp/depnotify.log
 echo "Status: Restarting, please wait..." >> /var/tmp/depnotify.log
 
-jamf recon
-kill "$caffeinatepid"
-/sbin/shutdown -r +2 &
-
 # Remove DEPNotify and the logs
 rm -Rf /Applications/Utilities/DEPNotify.app
 
@@ -137,7 +133,12 @@ rm -Rf /Applications/Utilities/DEPNotify.app
 rm -Rf /etc/kcpassword
 
 #Drop an Enrolment Complete Receipt into Shared User Folder
-/Users/Shared/.EnrolmentComplete
+touch /Users/Shared/.Enrolled
+
+jamf recon
+
+kill "$caffeinatepid"
+/sbin/shutdown -r +2 &
 
 # Wait a few seconds
 sleep 5
