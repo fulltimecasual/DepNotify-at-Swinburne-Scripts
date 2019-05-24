@@ -45,11 +45,12 @@ echo "dep-scripts policy completed"
 # 	• Fuji Xerox PS Plug-in Installer
 ##########################################################################################
 
-jamf policy -trigger dep-packages-2019
-echo "dep-packages policy completed"
+#Commenting out packages and policies to replace with Configuration Profiles
+#jamf policy -trigger dep-packages-2019
+#echo "dep-packages policy completed"
 
-jamf policy -trigger dep-staffPackages
-echo "dep-staffPackages policy completed"
+#jamf policy -trigger dep-staffPackages
+#echo "dep-staffPackages policy completed"
 
 
 
@@ -70,8 +71,8 @@ echo "dep-staffPrinter policy completed"
 jamf policy -trigger dep-webBrowsers
 echo "dep-webBrowsers policy completed"
 
-jamf policy -trigger dep-flash
-echo "dep-flash policy completed"
+#jamf policy -trigger dep-flash
+#echo "dep-flash policy completed"
 
 #jamf policy -trigger dep-silverlight
 #echo "dep-silverlight policy completed"
@@ -79,8 +80,8 @@ echo "dep-flash policy completed"
 #jamf policy -trigger dep-shockwave
 #echo "dep-shockwave policy completed"
 
-jamf policy -trigger dep-java
-echo "dep-java policy completed"
+#jamf policy -trigger dep-java
+#echo "dep-java policy completed"
 
 jamf policy -trigger dep-IPinMenuBar
 echo "dep-IPinMenuBar policy completed"
@@ -100,31 +101,16 @@ echo "dep-vlc policy completed"
 jamf policy -trigger dep-adobe-staff
 echo "dep-adobe-staff policy completed"
 
-
 jamf policy -trigger dep-K2Client
 echo "dep-K2Client policy completed"
 
-
-
 ##########################################################################################
-# Install Solstice Client if Mac is a Laptop
+# Install Solstice and Vivi
 ##########################################################################################
 
-# Get computer model
-model=$(system_profiler SPHardwareDataType | grep 'Model Identifier' | awk '{print $NF}')
 
-if [[ $model == MacBook* ]]
-
-	then
-	
     jamf policy -trigger dep-solstice
     echo "dep-solstice policy completed"
-    
-    else
-    echo "This Mac is not a Laptop. Solstice Client will not be installed."
-
-fi
-
 
 
 ##########################################################################################
@@ -165,8 +151,6 @@ echo "Installation of Base SOE Applications Complete"
 ##########################################################################################
 
 jamf recon
-
-
 
 ##################################################################################
 # Enrollment Completed
